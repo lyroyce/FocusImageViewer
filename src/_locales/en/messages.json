@@ -1,0 +1,34 @@
+{
+	"extName": {
+		"message": "Focus on Image",
+		"description": "Extension name."
+	},
+	"extDesc": {
+		"message": "This plugin provides a user-friendly image viewer and helps you to focus on the images in a web page without being distracted by other things.",
+		"description": "Extension description."
+	},
+	"noImage": {
+		"message": "Sorry, no appropriate image found.",
+		"description": "Displayed in the center of screen if no appropriate image found."
+	},
+	"prevImage": {
+		"message": "Previous Image",
+		"description": "Tooltips for the button which shows previous image."
+	},
+	"nextImage": {
+		"message": "Next Image",
+		"description": "Tooltips for the button which shows next image."
+	},
+	"prevPage": {
+		"message": "Previous Page",
+		"description": "Tooltips for the button which shows previous page."
+	},
+	"nextPage": {
+		"message": "Next Page",
+		"description": "Tooltips for the button which shows next page."
+	},
+	"usage": {
+		"message": "F2:\tOpen/Close\nEsc:\tClose\n<-:\tPrevious Image\n->:\tNext Image",
+		"description": "Help message for the usage of this extension."
+	}
+}

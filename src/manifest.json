@@ -1,9 +1,10 @@
 {
     "manifest_version": 2,
 
-    "name": "Focus on Image",
-    "description": "This plugin finds all images in a web page and provides a user-friendly UI for image viewing. 该插件能够帮助你找出网页中的所有图片，并提供一个美观的界面进行图片浏览。",
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDesc__",
     "version": "1.0",
+    "default_locale": "en",
     "icons": { 
         "16": "img/logo16.png",
         "48": "img/logo48.png",

@@ -113,7 +113,7 @@ function card(){
 	var element = $('.fcard-content');
 	if(element.length===0){
 		var wrapper = $('<div class="fcard"></div>').appendTo(content());
-		element = $('<div class="fcard-content">抱歉，没有发现合适的图片。</div>').appendTo(wrapper);
+		element = $('<div class="fcard-content">'+chrome.i18n.getMessage("noImage")+'</div>').appendTo(wrapper);
 	}
 	return element;
 }
@@ -140,7 +140,7 @@ function menu(){
 function prevButton(){
 	var element = $('.fprev');
 	if(element.length===0){
-		element = $('<div class="fprev"><a href="#" title="前一张"><b><</b></a></div>')
+		element = $('<div class="fprev"><a href="#" title="'+chrome.i18n.getMessage("prevImage")+'"><b><</b></a></div>')
 			.fadeTo('fast', 0.1).appendTo(menu());
 		element.click(function(event){
 			prevImage();
@@ -152,7 +152,7 @@ function prevButton(){
 function nextButton(){
 	var element = $('.fnext');
 	if(element.length===0){
-		element = $('<div class="fnext"><a href="#" title="下一张"><b>></b></a></div>')
+		element = $('<div class="fnext"><a href="#" title="'+chrome.i18n.getMessage("nextImage")+'"><b>></b></a></div>')
 			.appendTo(menu());
 		element.click(function(event){
 			nextImage();
@@ -178,7 +178,7 @@ function prevPage(){
 		element = findAndCloneFirstLink(["上页","上一页","<上一页","<"]);
 		if(element) element.removeAttr('class');
 		else element = $('<a></a>').fadeTo('fast', 0);
-		element.addClass('fprevpage').text('上一页');
+		element.addClass('fprevpage').text(chrome.i18n.getMessage("prevPage"));
 	}
 	return element;
 }
@@ -189,7 +189,7 @@ function nextPage(){
 		element = findAndCloneFirstLink(["下页","下一页","下一页>",">"]);
 		if(element) element.removeAttr('class');
 		else element = $('<a></a>').fadeTo('fast', 0);
-		element.addClass('fnextpage').text('下一页');
+		element.addClass('fnextpage').text(chrome.i18n.getMessage("nextPage"));
 	}
 	return element;
 }
@@ -210,9 +210,10 @@ function findAndCloneFirstLink(candidates){
 function help(){
 	var element = $('.help');
 	if(element.length===0){
-		var usage = "F2:\t打开/关闭\nEsc:\t关闭\n<-:\t前一张\n->:\t后一张";
+		var usage = chrome.i18n.getMessage("usage");
 		var usagediv = $('<div class="fusage"><pre>'+usage+'</pre></div>').hide().appendTo(content());
-		element = $('<div class="fhelp"><a href="#" title="Help"><b>?</b></a></div>').fadeTo('fast', 0.3).appendTo(content());
+		var extName = chrome.i18n.getMessage("extName");
+		element = $('<div class="fhelp"><a href="#" title="'+extName+'"><b>?</b></a></div>').fadeTo('fast', 0.3).appendTo(content());
 		element.hover(
 			function() {element.fadeTo('fast',1);usagediv.show()},
 			function() {element.fadeTo('fast',0.3);usagediv.hide()}
