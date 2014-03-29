@@ -12,7 +12,7 @@ function loadImages(){
 			checkImage(this);
 		}
 	});
-	nextImage();
+	if(originalImages.length>0) nextImage();
 }
 
 function checkImage(image){
@@ -25,21 +25,41 @@ function acceptImage(img){
 	return img.height>=img_size_limit&&img.width>=img_size_limit;
 }
 
+function hasNextImage(){
+	return currentIndex<originalImages.length-1;
+}
+
+function hasPrevImage(){
+	return currentIndex>0;
+}
+
 function nextImage(){
-	if(++currentIndex>=originalImages.length){
-		currentIndex=originalImages.length - 1;
-		nextPage().click();
+	if(hasNextImage()){
+		showImage(++currentIndex);
 	}else{
-		showImage(currentIndex);
+		nextPage();
 	}
 }
 
 function prevImage(){
-	if(--currentIndex<0){
-		currentIndex = 0;
-		prevPage().click();
+	if(hasPrevImage()){
+		showImage(--currentIndex);
 	}else{
-		showImage(currentIndex);
+		prevPage();
+	}
+}
+
+function nextPage(){
+	if(nextPageButton().is('a')){
+		root().css('cursor', 'progress');
+		nextPageButton()[0].click();
+	}
+}
+
+function prevPage(){
+	if(prevPageButton().is('a')){
+		root().css('cursor', 'progress');
+		prevPageButton()[0].click();
 	}
 }
 
@@ -58,8 +78,10 @@ function updateCard(image){
 	var src = image.attr('src') || image.attr('data-src') || image.attr('original');
 	var desc = findRelatedText(image);
 	var summary = (currentIndex+1)+'/'+originalImages.length;
-	var content = $('<img src="'+src+'"><br><div class="fdesc"><span>'+summary+'</span><div>'+desc+'</div></div>');
-	card().empty().append(content);
+	 // add a <br> to make sure image and description won't be in the same line
+	card().empty().append('<img src="'+src+'"><br>')
+		.append('<div class="fdesc"><span>'+summary+'</span><div>'+desc+'</div><br><br></div>')
+	content().focus();
 }
 
 function findRelatedText(image){

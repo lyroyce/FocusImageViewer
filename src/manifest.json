@@ -29,6 +29,7 @@
             "js": [
                 "js/jquery.js", 
                 "js/jquery.scrollto.js",
+                "js/focus.event.js",
                 "js/focus.ui.js",
                 "js/focus.image.js"
             ],
