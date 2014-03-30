@@ -29,7 +29,7 @@ function imageNavigationOnClick(){
 		clearTimeout(clearClick);
 		isClick = true;
 		// click is invalid if click too slow
-		clearClick = setTimeout(function(){isClick=false;}, 200);
+		clearClick = setTimeout(function(){isClick=false;}, 500);
 	});
 	root().mouseup(function(event){
 		if(isClick && event.which!==3){// no right click
