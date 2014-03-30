@@ -1,6 +1,10 @@
 Focus Image Viewer | 专注看图
 ===========
 
+This is a chrome extension for image viewing. To install it, please visit [chrome web store](https://chrome.google.com/webstore/detail/bidhfhcmmbkgcblpicmjdkoagiimgiao).
+
+简介/Introduction：
+-----
 该扩展提供一个美观易用的看图界面，能够帮助你专注于网页中的图片，而不被其他东西分心。
 This plugin provides a user-friendly image viewer and helps you to focus on the images in a web page without being distracted by other things.
 
