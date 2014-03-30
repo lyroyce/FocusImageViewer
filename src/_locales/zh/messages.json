@@ -3,6 +3,10 @@
 		"message": "专注看图",
 		"description": "Extension name."
 	},
+	"extShortName": {
+		"message": "专注看图",
+		"description": "Extension short name."
+	},
 	"extDesc": {
 		"message": "该插件提供一个美观易用的看图界面，能够帮助你专注于网页中的图片，而不被其他东西分心。",
 		"description": "Extension description."

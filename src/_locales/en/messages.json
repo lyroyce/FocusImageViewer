@@ -1,10 +1,14 @@
 {
 	"extName": {
-		"message": "Focus on Image",
+		"message": "Focus Image Viewer",
 		"description": "Extension name."
 	},
+	"extShortName": {
+		"message": "FocusViewer",
+		"description": "Extension short name."
+	},
 	"extDesc": {
-		"message": "This plugin provides a user-friendly image viewer and helps you to focus on the images in a web page without being distracted by other things.",
+		"message": "A user-friendly image viewer to help you to focus on the images in a web page without being distracted by other things.",
 		"description": "Extension description."
 	},
 	"noImage": {

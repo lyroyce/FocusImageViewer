@@ -214,7 +214,7 @@ function close(){
 function status(){
 	var element = $('.fstatus');
 	if(element.length===0){
-		element = $('<div class="fstatus">test</div>').appendTo(root());
+		element = $('<div class="fstatus"></div>').appendTo(root());
 	}
 	return element;
 }

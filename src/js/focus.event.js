@@ -6,16 +6,16 @@ function setupEvent(){
 
 function highlightImageButtonOnMouseMove(){
 	var nextImageHighlighted = true;
-	prevButton().fadeTo('fast', 0.1);
+	prevButton().fadeTo('fast', 0.2);
 	root().mousemove(function(e){
 		var separator = $(window).width()/2;
 		if(e.pageX>=separator && !nextImageHighlighted){
 			nextButton().fadeTo('fast', 1);
-			prevButton().fadeTo('fast', 0.1);
+			prevButton().fadeTo('fast', 0.2);
 			nextImageHighlighted=true;
 		}else if(e.pageX<separator && nextImageHighlighted){
 			prevButton().fadeTo('fast', 1);
-			nextButton().fadeTo('fast', 0.1);
+			nextButton().fadeTo('fast', 0.2);
 			nextImageHighlighted=false;
 		}
 	});

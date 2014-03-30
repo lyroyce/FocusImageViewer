@@ -80,7 +80,7 @@ function updateCard(image){
 	var summary = (currentIndex+1)+'/'+originalImages.length;
 	 // add a <br> to make sure image and description won't be in the same line
 	card().empty().append('<img src="'+src+'"><br>')
-		.append('<div class="fdesc"><span>'+summary+'</span><div>'+desc+'</div><br><br></div>')
+		.append('<div class="fdesc"><span>'+summary+'</span><div>'+desc+'</div><br><br></div>');
 	content().focus();
 }
 
@@ -90,8 +90,11 @@ function findRelatedText(image){
 	if(obj.children().length>5){
 		return ""; // too many elements, probably beyond the scope 
 	}else{
-		// remove all images from description
-		return obj.html().replace(/<img[^>]+>/g,'');
+		// remove all images and scripts from description
+		// remove any possible style constraint
+		return obj.html().replace(/<img[^>]+>/gi, '')
+				.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+				.replace(/class="[^"]*"/gi, '').replace(/style="[^"]*"/gi, '').replace(/id="[^"]*"/gi, '');
 	}
 }
 

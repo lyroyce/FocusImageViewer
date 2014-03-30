@@ -1,16 +1,17 @@
 .froot {font: 1rem "Microsoft Yahei",arial,sans-serif; font-family: "Microsoft Yahei",arial,sans-serif; font-size:1rem; color:#fff !important; width:100%; height:100%; }
 .froot a, .froot pre {font-family: "Microsoft Yahei","Times New Roman"; text-decoration: initial !important; color:#fff !important; background: transparent !important; border: transparent !important; margin: 1rem;}
+.froot div {background: transparent;}
 
-.froot .fcontent {position:fixed; left:0; top:0; width:100%; height:100%; overflow:auto; text-align:center; color:#fff; z-index:9999}
-.froot .fcontent-mask {opacity: 0.8; position:fixed; left:0; top:0; width:100%; height:100%; background-color:#000; z-index:9999}
+.froot .fcontent {position:fixed; left:0; top:0; width:100%; height:100%; overflow:auto; text-align:center; color:#fff; z-index:10000}
+.froot .fcontent-mask {opacity: 0.8; position:fixed; left:0; top:0; width:100%; height:100%; background-color:#000; z-index:10000}
 
 .froot .fcard {display:table; height:100%; width:100%}
 .froot .fcard .fcard-content {display:table-cell; vertical-align:middle}
 .froot .fcard .fcard-content img {max-width: 100%}
 .froot .fcard .fdesc {width:80%; display:inline-block}
 
-.froot .fmenu-mask {position:fixed; left:0; bottom:0; width:100%; height:3rem; background-color:#000; z-index:9999}
-.froot .fmenu {display: table; position:fixed; left:0; bottom:0; width:100%; height:3rem; color:#fff; text-align:center; z-index:9999}
+.froot .fmenu-mask {position:fixed; left:0; bottom:0; width:100%; height:3rem; background-color:#000; z-index:10000}
+.froot .fmenu {display: table; position:fixed; left:0; bottom:0; width:100%; height:3rem; color:#fff; text-align:center; z-index:10000}
 .froot .fpagination {display:table-cell; vertical-align:middle}
 
 .froot .fprev {float: left; padding-left: 1rem; font-size:2rem; cursor: pointer;}
@@ -21,4 +22,4 @@
 .froot .fhelp {cursor: help}
 .froot .fclose {cursor: pointer;}
 
-.froot .fstatus {position:fixed; top:-2rem; width: 100%; z-index:9999; text-align: center;}
+.froot .fstatus {position:fixed; top:-2rem; width: 100%; z-index:10000; text-align: center;}
