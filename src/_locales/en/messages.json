@@ -1,6 +1,6 @@
 {
 	"extName": {
-		"message": "Focus Image Viewer",
+		"message": "Focus Image Viewer | 专注看图",
 		"description": "Extension name."
 	},
 	"extShortName": {
@@ -8,7 +8,7 @@
 		"description": "Extension short name."
 	},
 	"extDesc": {
-		"message": "A user-friendly image viewer to help you to focus on the images in a web page without being distracted by other things.",
+		"message": "A user-friendly image viewer. 一个美观易用的看图界面，帮助你专注于网页中的图片。",
 		"description": "Extension description."
 	},
 	"noImage": {
