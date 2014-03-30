@@ -1,6 +1,8 @@
 Focus Image Viewer | 专注看图
 ===========
 
+安装/Installation:
+-----
 This is a chrome extension for image viewing. To install it, please visit [chrome web store](https://chrome.google.com/webstore/detail/bidhfhcmmbkgcblpicmjdkoagiimgiao).
 
 简介/Introduction：
