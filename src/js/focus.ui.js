@@ -84,8 +84,8 @@ function menu(){
 		pagination();
 		nextButton();
 		element.hover(
-			function() {menudiv_mask.fadeTo('fast',0.7); element.fadeTo('fast', 1)},
-			function() {menudiv_mask.fadeTo('fast',0.3); element.fadeTo('fast', 0.8)}
+			function() {menudiv_mask.fadeTo('fast',0.7); pagination().fadeTo('fast', 1);},
+			function() {menudiv_mask.fadeTo('fast',0.3); pagination().fadeTo('fast', 0.1);}
 		);
 		element.mousedown(function(event){
 			event.stopPropagation();
@@ -125,8 +125,9 @@ function pagination(){
 		var prevPage = prevPageButton();
 		var nextPage = nextPageButton();
 		element.append(prevPage);
-		if(prevPage.is('a') || nextPage.is('a')) element.append('<span> | </span>');
+		element.append('<span>   </span>');
 		element.append(nextPage);
+		element.fadeTo('fast', 0.1);
 	}
 	return element;
 }
